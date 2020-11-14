@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+//import Contatore from './Contatore';
+//import Contatore2 from './Contatore2';
+//import Photos from './Photos';
+import Accordion from './Accordion';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+const cards = {
+  '1' : {
+    titolo: "Titolo1",
+    data: new Date().toLocaleDateString(),
+    testo: "Testo testo testo"
+  },
+  '2' : {
+    titolo: "Titolo2",
+    data: new Date().toLocaleDateString(),
+    testo: "Testo testo testo"
+  },
+  '3' : {
+    titolo: "Titolo3",
+    data: new Date().toLocaleDateString(),
+    testo: "Testo testo testo"
+  }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Accordion idAcc={"accordion"} cards={cards}></Accordion>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
